@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andreaa Anton</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- am preferat sa folosesc iconitele de pe fontawesome , fiind mult mai variate decat cele de pe boostrap. In rest nu am folosit alta librarie pentru alt scop decat obtinerea iconitelor -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <!-- fonturi google-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BioRhyme&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Paint app</h1>
+    </div>
+
+    <div class="controaleDesen">
+      <div class="controale">
+        <button
+          type="button"
+          title="Increment Brush"
+          class="marimeBrush"
+          onclick="incrementBrush()"
+        >
+          <i class="fas fa-plus fa-2x"></i>
+        </button>
+        <button
+          type="button"
+          title="Decrement Brush"
+          class="marimeBrush"
+          onclick="decrementBrush()"
+        >
+          <i class="fas fa-minus fa-2x"></i>
+        </button>
+        <button
+          type="button"
+          title="Tool-ul default - Brush"
+          onclick="functieToolBrush()"
+          class="selectTool activ"
+          id="brushTool"
+        >
+          <i class="fas fa-paint-roller fa-2x"></i>
+        </button>
+        <button
+          type="button"
+          onclick="functieToolDreptunghi()"
+          class="selectTool"
+          title="Dreptunghi"
+        >
+          <i class="far fa-square fa-2x"></i>
+        </button>
+        <button
+          type="button"
+          onclick="functieToolLinie()"
+          class="selectTool"
+          title="Linie"
+        >
+          <i class="fas fa-arrows-alt-h fa-2x"></i>
+        </button>
+        <input
+          type="color"
+          id="selectorCuloareBrush"
+          value="#000000"
+          title="Culoare Brush"
+        />
+        <input
+          type="color"
+          id="selectorCuloareBackground"
+          value="#FFFFE5"
+          title="Culoare Background"
+        />
+        <button type="button" onclick="deleteCanvas()" title="Reseteaza Canvas">
+          <i class="far fa-trash-alt fa-2x"></i>
+        </button>
+      </div>
+      <div class="download">
+        <div class="jpg">
+          <p>jpg</p>
+          <a id="salveazaJPG" download="imagine.jpg"
+            ><i class="far fa-file-image fa-2x"></i
+          ></a>
+        </div>
+        <div class="svg">
+          <p>svg</p>
+          <a id="salveazaSVG" download="imagine.svg"
+            ><i class="fas fa-file-image fa-2x"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <div id="cursor"></div>
+    <div class="canvasDesen">
+      <canvas id="idCanvas" height="600" width="1000"
+        >Browserul dvs nu suporta elementele de tip Canvas</canvas
+      >
+      <div class="listaFiguri">
+        <h2>Lista figuri</h2>
+        <div class="titluElemente">Brush:</div>
+        <p id="listaBrush">0</p>
+        <div class="titluElemente">Dreptunghi:</div>
+        <p id="listaDrept">0</p>
+        <div class="titluElemente">Linie:</div>
+        <p id="listaLinie">0</p>
+        <button type="button" onclick="stergeFiguraRandom()">
+          Sterge o figura random
+        </button>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

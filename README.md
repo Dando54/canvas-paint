@@ -1,3 +1,3 @@
 # canvas-paint
 
-![alt text](https://github.com/Dando54/canvas-paint/img/blob/main/paint.png?raw=true)
+![](https://github.com/Dando54/canvas-paint/tree/main/img/paint.png)
